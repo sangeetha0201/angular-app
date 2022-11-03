@@ -10,7 +10,7 @@ pipeline {
             steps{
               script {
                 sh "cd frontend"
-                dockerImage = docker.build(registry + ":$BUILD_NUMBER", "-f frontend/Dockerfile .")
+                dockerImage = docker.build(registry + ":$BUILD_NUMBER", "-f frontend/Dockerfile")
               }
             }
         
