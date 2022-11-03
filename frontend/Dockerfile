@@ -1,8 +1,8 @@
 FROM sandeep4642/angular14:1
 
-WORKDIR /apps
+WORKDIR /apps/frontend/
 
-COPY frontend /apps/
+COPY frontend/* /apps/frontend/
 
 RUN npm install
 
