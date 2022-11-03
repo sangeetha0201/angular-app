@@ -9,6 +9,7 @@ pipeline {
         stage('Building Docker image') {
             steps{
               script {
+                sh "cd frontend"
                 dockerImage = docker.build(registry + ":$BUILD_NUMBER", "-f frontend/Dockerfile .")
               }
             }
