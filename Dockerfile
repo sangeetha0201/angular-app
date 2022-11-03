@@ -1,9 +1,15 @@
-FROM sandeep4642/angular-app
+FROM sandeep4642/angular-app:2
 
 RUN mkdir /apps
 
-COPY ./target/*.jar /apps/shopsample1.jar
+COPY . /apps
 
-EXPOSE 8080
+WORKDIR /apps
 
-CMD ["java", "-jar", "/apps/shopsample1.jar"]
+RUN npm install
+
+RUN npm run build
+
+EXPOSE 4200
+
+CMD ["npm", "run", "start"]
