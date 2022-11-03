@@ -6,11 +6,6 @@ pipeline {
       }
     agent { label "slave-1"}
     stages {
-        stage('npm build'){
-            steps{
-                sh 'npm run build'
-            }
-        }
         stage('Building Docker image') {
             steps{
               script {
