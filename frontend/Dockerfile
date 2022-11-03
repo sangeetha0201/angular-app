@@ -2,7 +2,7 @@ FROM sandeep4642/angular14:1
 
 WORKDIR /apps
 
-COPY package.json .
+COPY frontend/* /apps/
 
 RUN npm install
 
