@@ -1,10 +1,8 @@
 FROM sandeep4642/angular14:1
 
-RUN mkdir /apps
-
-COPY . /apps
-
 WORKDIR /apps
+
+COPY . /apps/
 
 RUN npm install
 
